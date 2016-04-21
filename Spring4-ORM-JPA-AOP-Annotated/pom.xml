@@ -16,20 +16,6 @@
     <packaging>jar</packaging>
 
     <name>Spring4-ORM-JPA-AOP-Annotated</name>
-    <url>http://maven.apache.org</url>
-
-    <properties>
-        <dependency.commons-lang3.version>3.1</dependency.commons-lang3.version>
-        <dependency.spring-data.version>1.9.2.RELEASE</dependency.spring-data.version>
-        <dependency.hibernate.version>4.3.11.Final</dependency.hibernate.version>
-        <dependency.postgres.version>9.2-1002-jdbc4</dependency.postgres.version>
-        <dependency.aspectj.version>1.8.7</dependency.aspectj.version>
-        <dependency.spring.version>4.2.1.RELEASE</dependency.spring.version>
-        <dependency.log4j.version>1.2.17</dependency.log4j.version>
-        <dependency.slf4j.version>1.7.21</dependency.slf4j.version>
-        <dependency.junit.version>4.12</dependency.junit.version>
-        <dependency.guava.version>19.0</dependency.guava.version>
-    </properties>
 
     <dependencies>
 
@@ -37,120 +23,98 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-core</artifactId>
-            <version>${dependency.spring.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-expression</artifactId>
-            <version>${dependency.spring.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-beans</artifactId>
-            <version>${dependency.spring.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
-            <version>${dependency.spring.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context-support</artifactId>
-            <version>${dependency.spring.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-tx</artifactId>
-            <version>${dependency.spring.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-orm</artifactId>
-            <version>${dependency.spring.version}</version>
         </dependency>
 
         <dependency>
             <groupId>org.springframework.data</groupId>
             <artifactId>spring-data-jpa</artifactId>
-            <version>${dependency.spring-data.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-jdbc</artifactId>
-            <version>${dependency.spring.version}</version>
         </dependency>
 
         <!-- OTHER REQUIRED DEPENDENCIES -->
         <dependency>
             <groupId>org.aspectj</groupId>
             <artifactId>aspectjweaver</artifactId>
-            <version>${dependency.aspectj.version}</version>
         </dependency>
         <dependency>
             <groupId>org.aspectj</groupId>
             <artifactId>aspectjrt</artifactId>
-            <version>${dependency.aspectj.version}</version>
         </dependency>
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-core</artifactId>
-            <version>${dependency.hibernate.version}</version>
         </dependency>
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-entitymanager</artifactId>
-            <version>${dependency.hibernate.version}</version>
         </dependency>
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
-            <version>${dependency.postgres.version}</version>
         </dependency>
         <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
-            <version>${dependency.guava.version}</version>
         </dependency>
 
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
-            <version>${dependency.slf4j.version}</version>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-log4j12</artifactId>
-            <version>${dependency.slf4j.version}</version>
         </dependency>
         <dependency>
             <groupId>log4j</groupId>
             <artifactId>log4j</artifactId>
-            <version>${dependency.log4j.version}</version>
         </dependency>
         <dependency>
             <groupId>log4j</groupId>
             <artifactId>apache-log4j-extras</artifactId>
-            <version>${dependency.log4j.version}</version>
         </dependency>
 
         <!-- TEST DEPENDENCIES -->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>${dependency.junit.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-test</artifactId>
-            <version>${dependency.spring.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
-            <version>${dependency.commons-lang3.version}</version>
             <scope>test</scope>
         </dependency>
 
