@@ -69,4 +69,9 @@ public class AppTest extends TestCase {
     adviceTester.saveThrowException();
   }
 
+  @Test
+  public void testMyOwnAnnotation() {
+    adviceTester.anotherTest();
+  }
+
 }

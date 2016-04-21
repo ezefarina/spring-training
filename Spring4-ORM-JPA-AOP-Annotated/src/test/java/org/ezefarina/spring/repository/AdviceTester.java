@@ -1,6 +1,7 @@
 package org.ezefarina.spring.repository;
 
 import org.apache.commons.lang3.RandomStringUtils;
+import org.ezefarina.spring.aspects.MyAnnot;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
@@ -27,6 +28,11 @@ public class AdviceTester {
   public void saveThrowException () {
     logger.debug("Ejecutado saveThrowException");
     throw new java.lang.IllegalArgumentException();
+  }
+
+  @MyAnnot
+  public String anotherTest() {
+    return getRandomString();
   }
 
   private String getRandomString() {
