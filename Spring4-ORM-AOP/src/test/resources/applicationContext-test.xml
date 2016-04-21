@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+	                   http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+                       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+                       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd">
+
+    <import resource="classpath*:applicationContext.xml"/>
+
+    <context:component-scan base-package="org.ezefarina.spring.test"/>
+
+    <aop:config>
+        <aop:aspect ref="logging">
+            <aop:pointcut id="testClassPointCut" expression="execution( public * org.ezefarina.spring.test.AdviceTester.*(..))"/>
+            <aop:before pointcut-ref="testClassPointCut" method="logParameters"/>
+            <aop:after-returning pointcut-ref="testClassPointCut" method="logReturnValue" returning="returnedValue"/>
+            <aop:after-throwing pointcut-ref="testClassPointCut" method="logException" throwing="ex"/>
+        </aop:aspect>
+
+        <aop:aspect ref="validation">
+            <aop:around pointcut-ref="testClassPointCut" method="isNotNull"/>
+        </aop:aspect>
+    </aop:config>
+
+</beans>
