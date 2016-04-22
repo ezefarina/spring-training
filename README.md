@@ -1,3 +1,29 @@
+## To move the examples to a MySQL database
+
+* Ensure MySQL process is running
+* Ensure the existence of the database to be used
+* Update the following properties on db.properties for Spring4-ORM-JPA-AOP-Annotations, or applicationContext.xml for Spring4-ORM-AOP. The useSSL in the url depends on how the service is configured. Not always needed
+```
+db.driver=com.mysql.cj.jdbc.Driver
+db.url=jdbc:mysql://localhost/<databaseName>?useSSL=true
+db.username=root
+db.password=
+hibernate.dialect=org.hibernate.dialect.MySQLDialect
+```
+* Update maven pom.xml, replacing the postgresql artifact by this one
+```
+<dependency>
+	<groupId>mysql</groupId>
+	<artifactId>mysql-connector-java</artifactId>
+	<version>6.0.2</version>
+</dependency>
+```
+* Update Eclipse project by running, and do a Refresh on Eclipse right after
+```
+mvn eclipse:eclipse
+```
+* Run AppTest, by right-clicking on it -> Run as JUnit
+
 ## AOP Pointcuts expressions reference
 
 ### 1) Matching Method Signature Patterns

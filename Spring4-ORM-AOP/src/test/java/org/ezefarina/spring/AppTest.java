@@ -45,6 +45,11 @@ public class AppTest extends TestCase {
   }
 
   @Test
+  public void testValidatingNullInput() {
+    adviceTester.receiveSomething(null);
+  }
+
+  @Test
   public void testLoggingBothParams() {
     adviceTester.receiveAndRetrieveSomething("test");
   }
